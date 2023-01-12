@@ -1,55 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>iPhone13 等老款机器调出灵动岛</title>
-    <url>/2023/01/12/iPhone13-%E7%AD%89%E8%80%81%E6%AC%BE%E6%9C%BA%E5%99%A8%E8%B0%83%E5%87%BA%E7%81%B5%E5%8A%A8%E5%B2%9B/</url>
-    <content><![CDATA[<h1 id="iPhone13-等老款机器调出灵动岛"><a href="#iPhone13-等老款机器调出灵动岛" class="headerlink" title="iPhone13 等老款机器调出灵动岛"></a>iPhone13 等老款机器调出灵动岛</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>今天刷 b 站时看到了个方法 </p>
-<blockquote>
-<p><a href="https://b23.tv/xwCKTvB">【【全网首发】iOS 16 除14 Pro&#x2F;14 Pro Max设备未越狱实现灵动岛功能-哔哩哔哩】</a></p>
-</blockquote>
-<hr>
-<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><p><em><strong>适用系统:仅 iOS16，最高 iOS16.1.2 封顶</strong></em></p>
-<p><em><strong>iOS15 不可修改，会白苹果！！！</strong></em></p>
-<p><em><strong>iOS15 不可修改，会白苹果！！！</strong></em></p>
-<p><em><strong>iOS15 不可修改，会白苹果！！！</strong></em></p>
-<p><strong>iPhoneXr,iPhone11等由于分辨率问题，修改开机会报错，介意的请勿尝试</strong></p>
-<hr>
-<h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图:"></a>效果图:</h2><p><img src="https://s2.loli.net/2023/01/12/KMaUzxJ5dmc1Huf.jpg" alt="IMG_3514_20230112-213926_.JPG"></p>
-<p><img src="https://s2.loli.net/2023/01/12/o68NIQ5SgjUxt3G.jpg" alt="IMG_3515_20230112-213928_.JPG"></p>
-<hr>
-<h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h2><ul>
-<li>工具: <em>Santander 文件管理器</em>, <em>手</em>, <em>大脑</em></li>
-<li>手机：<em>不限设备，但系统必须为iOS16beta1-iOS16.1.2</em></li>
-</ul>
-<p>Santander 文件管理器下载链接: <a href="https://www.lanzouy.com/tp/iwBlW0kem2pe">查看链接</a></p>
-<p>如证书失效，请自行使用签名工具签名安装</p>
-<hr>
-<h2 id="正式操作"><a href="#正式操作" class="headerlink" title="正式操作"></a>正式操作</h2><h3 id="1-打开文件管理器"><a href="#1-打开文件管理器" class="headerlink" title="1.打开文件管理器"></a>1.打开文件管理器</h3><p>点击右上角三个点，点击 Go to..</p>
-<p><img src="https://s2.loli.net/2023/01/12/fl8BdGqNtTsc4KA.jpg" alt="IMG_3516_20230112-213930_.JPG"></p>
-<p>点击 Other..</p>
-<p>并粘贴路径后点击 Go 按钮: </p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/var/containers/Shared/SystemGroup/systemgroup.com.apple.mobilegestaltcache/Library/Caches/com.apple.MobileGestalt.plist</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-点击-CacheExtra"><a href="#2-点击-CacheExtra" class="headerlink" title="2.点击 CacheExtra"></a>2.点击 CacheExtra</h3><p><img src="https://s2.loli.net/2023/01/12/CldyQni98XOxGq7.jpg" alt="IMG_3517_20230112-213933_.JPG"></p>
-<h3 id="3-Search-框内搜索-opei-点击搜索结果，并点击ArtworkDeviceSubType-项"><a href="#3-Search-框内搜索-opei-点击搜索结果，并点击ArtworkDeviceSubType-项" class="headerlink" title="3.Search 框内搜索 opei 点击搜索结果，并点击ArtworkDeviceSubType 项"></a>3.Search 框内搜索 opei 点击搜索结果，并点击ArtworkDeviceSubType 项</h3><p>修改 value 为 2556，这是iPhone14Pro的值。如果你的手机是iPhone13mini，iPhone12mini，请使用iPhone14ProMax的值: 2796</p>
-<p><em><strong>并请记住原来的 value，方便后续修改回本机的数字</strong></em></p>
-<p><img src="https://s2.loli.net/2023/01/12/v27LpAi3RDNmfCl.jpg" alt="IMG_3518_20230112-213935_.JPG"></p>
-<p>修改完成后点击 Back ，点击右上角 Done</p>
-<h3 id="4-再次点击右上角三个点"><a href="#4-再次点击右上角三个点" class="headerlink" title="4.再次点击右上角三个点"></a>4.再次点击右上角三个点</h3><p><img src="https://s2.loli.net/2023/01/12/3ltapD9ocYL65ZC.jpg" alt="IMG_3519_20230112-213937_.JPG"></p>
-<p>点击 Respring 按钮注销重启后完成修改，可见灵动岛已经出现</p>
-<p><img src="https://s2.loli.net/2023/01/12/x9gwd6sHWBiv3cb.jpg" alt="IMG_3520_20230112-213940_.JPG"></p>
-]]></content>
-      <categories>
-        <category>iOS</category>
-      </categories>
-      <tags>
-        <tag>iOS</tag>
-        <tag>越狱</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>从零开始的Android Recovery编译</title>
-    <url>/2023/01/12/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84Android-Recovery%E7%BC%96%E8%AF%91/</url>
+    <url>/2021/07/18/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84Android-Recovery%E7%BC%96%E8%AF%91/</url>
     <content><![CDATA[<h1 id="从零开始的Android-Recovery-编译"><a href="#从零开始的Android-Recovery-编译" class="headerlink" title="从零开始的Android Recovery 编译"></a>从零开始的Android Recovery 编译</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言:"></a>前言:</h2><p>很多老哥想在自己刷机时使用更好看的Rec，然而自己不会编译，亦或是自己用的手机没有Rec，想自己动手编译一个来愉快的刷机，本篇教程可以带你快速入门！</p>
 <hr>
 <h2 id="一-要求"><a href="#一-要求" class="headerlink" title="一.要求"></a>一.要求</h2><ul>
@@ -167,6 +120,53 @@
       <tags>
         <tag>Android</tag>
         <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>iPhone13 等老款机器调出灵动岛</title>
+    <url>/2023/01/12/iPhone13-%E7%AD%89%E8%80%81%E6%AC%BE%E6%9C%BA%E5%99%A8%E8%B0%83%E5%87%BA%E7%81%B5%E5%8A%A8%E5%B2%9B/</url>
+    <content><![CDATA[<h1 id="iPhone13-等老款机器调出灵动岛"><a href="#iPhone13-等老款机器调出灵动岛" class="headerlink" title="iPhone13 等老款机器调出灵动岛"></a>iPhone13 等老款机器调出灵动岛</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>今天刷 b 站时看到了个方法 </p>
+<blockquote>
+<p><a href="https://b23.tv/xwCKTvB">【【全网首发】iOS 16 除14 Pro&#x2F;14 Pro Max设备未越狱实现灵动岛功能-哔哩哔哩】</a></p>
+</blockquote>
+<hr>
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><p><em><strong>适用系统:仅 iOS16，最高 iOS16.1.2 封顶</strong></em></p>
+<p><em><strong>iOS15 不可修改，会白苹果！！！</strong></em></p>
+<p><em><strong>iOS15 不可修改，会白苹果！！！</strong></em></p>
+<p><em><strong>iOS15 不可修改，会白苹果！！！</strong></em></p>
+<p><strong>iPhoneXr,iPhone11等由于分辨率问题，修改开机会报错，介意的请勿尝试</strong></p>
+<hr>
+<h2 id="效果图"><a href="#效果图" class="headerlink" title="效果图:"></a>效果图:</h2><p><img src="https://s2.loli.net/2023/01/12/KMaUzxJ5dmc1Huf.jpg" alt="IMG_3514_20230112-213926_.JPG"></p>
+<p><img src="https://s2.loli.net/2023/01/12/o68NIQ5SgjUxt3G.jpg" alt="IMG_3515_20230112-213928_.JPG"></p>
+<hr>
+<h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h2><ul>
+<li>工具: <em>Santander 文件管理器</em>, <em>手</em>, <em>大脑</em></li>
+<li>手机：<em>不限设备，但系统必须为iOS16beta1-iOS16.1.2</em></li>
+</ul>
+<p>Santander 文件管理器下载链接: <a href="https://www.lanzouy.com/tp/iwBlW0kem2pe">查看链接</a></p>
+<p>如证书失效，请自行使用签名工具签名安装</p>
+<hr>
+<h2 id="正式操作"><a href="#正式操作" class="headerlink" title="正式操作"></a>正式操作</h2><h3 id="1-打开文件管理器"><a href="#1-打开文件管理器" class="headerlink" title="1.打开文件管理器"></a>1.打开文件管理器</h3><p>点击右上角三个点，点击 Go to..</p>
+<p><img src="https://s2.loli.net/2023/01/12/fl8BdGqNtTsc4KA.jpg" alt="IMG_3516_20230112-213930_.JPG"></p>
+<p>点击 Other..</p>
+<p>并粘贴路径后点击 Go 按钮: </p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/var/containers/Shared/SystemGroup/systemgroup.com.apple.mobilegestaltcache/Library/Caches/com.apple.MobileGestalt.plist</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-点击-CacheExtra"><a href="#2-点击-CacheExtra" class="headerlink" title="2.点击 CacheExtra"></a>2.点击 CacheExtra</h3><p><img src="https://s2.loli.net/2023/01/12/CldyQni98XOxGq7.jpg" alt="IMG_3517_20230112-213933_.JPG"></p>
+<h3 id="3-Search-框内搜索-opei-点击搜索结果，并点击ArtworkDeviceSubType-项"><a href="#3-Search-框内搜索-opei-点击搜索结果，并点击ArtworkDeviceSubType-项" class="headerlink" title="3.Search 框内搜索 opei 点击搜索结果，并点击ArtworkDeviceSubType 项"></a>3.Search 框内搜索 opei 点击搜索结果，并点击ArtworkDeviceSubType 项</h3><p>修改 value 为 2556，这是iPhone14Pro的值。如果你的手机是iPhone13mini，iPhone12mini，请使用iPhone14ProMax的值: 2796</p>
+<p><em><strong>并请记住原来的 value，方便后续修改回本机的数字</strong></em></p>
+<p><img src="https://s2.loli.net/2023/01/12/v27LpAi3RDNmfCl.jpg" alt="IMG_3518_20230112-213935_.JPG"></p>
+<p>修改完成后点击 Back ，点击右上角 Done</p>
+<h3 id="4-再次点击右上角三个点"><a href="#4-再次点击右上角三个点" class="headerlink" title="4.再次点击右上角三个点"></a>4.再次点击右上角三个点</h3><p><img src="https://s2.loli.net/2023/01/12/3ltapD9ocYL65ZC.jpg" alt="IMG_3519_20230112-213937_.JPG"></p>
+<p>点击 Respring 按钮注销重启后完成修改，可见灵动岛已经出现</p>
+<p><img src="https://s2.loli.net/2023/01/12/x9gwd6sHWBiv3cb.jpg" alt="IMG_3520_20230112-213940_.JPG"></p>
+]]></content>
+      <categories>
+        <category>iOS</category>
+      </categories>
+      <tags>
+        <tag>iOS</tag>
+        <tag>越狱</tag>
       </tags>
   </entry>
 </search>

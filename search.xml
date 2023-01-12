@@ -34,7 +34,7 @@
 <p><del>设置Github代理，以解决国内拉源码慢或无法拉取的问题</del></p>
 <p><del>[git config –global url.<a href="https://mirrors.bfsu.edu.cn/git/AOSP/.insteadof">https://mirrors.bfsu.edu.cn/git/AOSP/.insteadof</a> <a href="https://android.googlesource.com]">https://android.googlesource.com]</a></del></p>
 <p><del>[git config –global url.<a href="https://hub.fastgit.org/.insteadof">https://hub.fastgit.org/.insteadof</a> <a href="https://github.com]">https://github.com]</a></del></p>
-<p>$\color{Red}Fastgit代理站炸掉了，请不要使用代理站$</p>
+<p>Fastgit代理站炸掉了，请不要使用代理站</p>
 <p><code>mkdir twrp</code></p>
 <p><code>cd twrp</code></p>
 <p><code>repo init --depth=1 -u git://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b twrp-10.0</code></p>

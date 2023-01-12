@@ -1,26 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2023/01/11/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+    <title>从零开始的Android Recovery编译</title>
+    <url>/2023/01/12/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84Android-Recovery%E7%BC%96%E8%AF%91/</url>
+    <content><![CDATA[<h1 id="从零开始的Android-Recovery-编译"><a href="#从零开始的Android-Recovery-编译" class="headerlink" title="从零开始的Android Recovery 编译"></a>从零开始的Android Recovery 编译</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言:"></a>前言:</h2><p>很多老哥想在自己刷机时使用更好看的Rec，然而自己不会编译，亦或是自己用的手机没有Rec，想自己动手编译一个来愉快的刷机，本篇教程可以带你快速入门！</p>
+<h2 id="一-要求"><a href="#一-要求" class="headerlink" title="一.要求"></a>一.要求</h2><ul>
+<li>1.一双手</li>
+<li>2.一个会用搜索引擎的大脑</li>
+<li>3.一台电脑</li>
+<li>4.硬盘剩余50GB至少</li>
+<li>5.一个Linux操作环境，推荐实体机双系统安装Ubuntu20.04，当然你也可以使用虚拟机，WSl2等来安装Ubuntu<br><a href="https://docs.microsoft.com/zh-cn/windows/wsl/install-win10">WSL安装教程</a></li>
+</ul>
+<h2 id="二-前期准备工作"><a href="#二-前期准备工作" class="headerlink" title="二.前期准备工作"></a>二.前期准备工作</h2><p>本人在这里使用WSL2进行编译</p>
+<p>系统版本：Windows 11 21H2 22000.71</p>
+<p>WSL版本：Ubuntu20.04(WSL2)</p>
+<p>图片</p>
+<p>我们进入GitHub，找到TWRP的源码</p>
+<p>地址：<a href="https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni">https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni</a></p>
+<p>这里我们选择twrp-10.0的分支进行编译</p>
+<p>首先打开终端<br>图片<br>安装编译需要用的依赖<br>[sudo apt update]<br>[sudo apt install bc bison build-essential ccache curl flex g++-multilib gcc-multilib git gnupg gperf imagemagick lib32ncurses5-dev lib32readline-dev lib32z1-dev liblz4-tool libncurses5 libncurses5-dev libsdl1.2-dev libssl-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-dev git]</p>
+<p>安装repo,这是Google开发的用于管理Android版本库的一个工具<br>[mkdir -p ~&#x2F;bin]<br>[curl <a href="https://mirrors.tuna.tsinghua.edu.cn/git/git-repo">https://mirrors.tuna.tsinghua.edu.cn/git/git-repo</a> &gt; ~&#x2F;bin&#x2F;repo]<br>[sudo cp ~&#x2F;bin&#x2F;repo &#x2F;bin&#x2F;repo]<br>[sudo chmod a+x &#x2F;bin&#x2F;repo]</p>
+<p>[export REPO_URL&#x3D;’<a href="https://mirrors.tuna.tsinghua.edu.cn/git/git-repo']">https://mirrors.tuna.tsinghua.edu.cn/git/git-repo&#39;]</a></p>
+<p><del>设置Github代理，以解决国内拉源码慢或无法拉取的问题</del></p>
+<p><del>[git config –global url.<a href="https://mirrors.bfsu.edu.cn/git/AOSP/.insteadof">https://mirrors.bfsu.edu.cn/git/AOSP/.insteadof</a> <a href="https://android.googlesource.com]">https://android.googlesource.com]</a></del></p>
+<p><del>[git config –global url.<a href="https://hub.fastgit.org/.insteadof">https://hub.fastgit.org/.insteadof</a> <a href="https://github.com]">https://github.com]</a></del></p>
+<p><em><strong>Fastgit代理站炸掉了，不要使用代理站</strong></em></p>
+<p>[mkdir twrp]<br>[cd twrp]<br>[repo init –depth&#x3D;1 -u git:&#x2F;&#x2F;github.com&#x2F;minimal-manifest-twrp&#x2F;platform_manifest_twrp_omni.git -b twrp-10.0]<br>注：<br>1.这里的–depth&#x3D;1参数是只拉取一层提交，可以减少拉下来的源码大小<br>2.这里的twrp-10.0是要拉取的分支，您可以根据自己的需求在twrp项目地址中找到需要的版本并替换命令中的twrp-10.0<br>图片<br>出现如图的repo has been initialized in xxxxxxx就成功了</p>
+<p>接下来我们开始同步源码<br>[repo sync]</p>
+<p>出现如图的提示我们就拉取完毕源码啦<br>图片</p>
+<p>二.编译准备工作<br>接下来就要开始编译了</p>
+<p>准备工作：<br>准备好自己设备的Device Tree(下文称dt)<br>dt的获取有两个渠道:</p>
+<p>1.Github上搜索 手机代号+twrp<br>这是一个小例子：<br>图片<br>cepheus twrp<br>cd ~&#x2F;twrp<br>git clone <a href="https://github.com/mauronofrio/android_device_xiaomi_cepheus">https://github.com/mauronofrio/android_device_xiaomi_cepheus</a> device&#x2F;xiaomi&#x2F;cepheus<br>分析:git clone 项目地址 克隆到目标路径</p>
+<p>这时候有人肯定就要说了<br>伞兵楼主，我哪来的设备树?我这手机那么冷门？鬼都不知道有这手机</p>
+<p>2.使用脚本生成dt<br>好在Github上有大佬给我们写了一键生成omni dt的工具<br>项目地址: <a href="https://github.com/SebaUbuntu/TWRP-device-tree-generator">https://github.com/SebaUbuntu/TWRP-device-tree-generator</a></p>
+<p>接下来我教你们使用它</p>
+<p>需要的文件:<br>设备的recovery&#x2F;boot.img<br>(手机是A-Only或Sar的提取recovery.img,A&#x2F;B分区的提取boot.img)</p>
+<p>[sudo apt install cpio]<br>[pip3 install twrpdtgen]<br>[python3 -m twrpdtgen recovery&#x2F;boot.img的绝对路径]<br>图片<br>如图我把recovery镜像放在了&#x2F;root&#x2F;dtgen文件夹里<br>则我要运行<br>python3 -m twrpdtgen &#x2F;root&#x2F;dtgen&#x2F;recovery.img<br>图片<br>出现如图提示就大功告成了，在当前路径下就会出现生成好的dt<br>进入生成的output文件夹，我们可以看到一个名为厂商名的文件夹<br>这里是meizu<br>我们复制这个文件夹到源码目录的device文件夹中，如果没有device文件夹则自行新建一个</p>
+<p>进入源码目录&#x2F;device&#x2F;厂商名的文件夹里</p>
+<p>里面还有一个文件夹，这是你的设备名，记住这个文件夹名，待会会用到(下称设备名)</p>
+<p>回到源码根目录</p>
+<p>[. build&#x2F;envsetup.sh]<br>[lunch omni_设备名-eng]<br>这是一个小例子:<br>lunch omni_meizu16sPro-eng<br>图片<br>出现如图就是成功了</p>
+<p>[export ALLOW_MISSING_DEPENDENCIES&#x3D;true]<br>[export LC_ALL&#x3D;”C”]<br>[mka recoveryimage]<br>图片<br>至此，您就已经开始编译，此过程比较漫长，取决于您电脑的配置<br>图片<br>当当当！出现这个提示意味着我们已经编译完成了<br>我们进入out&#x2F;target&#x2F;product&#x2F;设备名 这个文件夹<br>里面的recovery就是编译出的twrp！<br>如果教程对你有帮助可以三连哦！<br>点赞收藏关注！！！</p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>wwrrj&#39;s blog</title>
-    <url>/2023/01/11/wwrrj-s-blog/</url>
-    <content><![CDATA[]]></content>
+      <categories>
+        <category>Android</category>
+        <category>编译</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>Linux</tag>
+      </tags>
   </entry>
 </search>

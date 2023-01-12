@@ -95,7 +95,7 @@
 <p>进入源码目录&#x2F;device&#x2F;厂商名的文件夹里</p>
 <p><img src="https://s2.loli.net/2023/01/12/xwsJWljezRrbKpQ.jpg" alt="IMG_3494_20230112-161104_.JPG"></p>
 <p>里面还有一个文件夹，这是你的设备名，记住这个文件夹名，待会会用到(下称设备名)</p>
-<h3 id="四-开始编译"><a href="#四-开始编译" class="headerlink" title="四.开始编译"></a>四.开始编译</h3><p>回到源码根目录</p>
+<h2 id="四-开始编译"><a href="#四-开始编译" class="headerlink" title="四.开始编译"></a>四.开始编译</h2><p>回到源码根目录</p>
 <p><code>. build/envsetup.sh</code></p>
 <p><code>lunch omni_设备名-eng</code></p>
 <p>这是一个小例子:</p>

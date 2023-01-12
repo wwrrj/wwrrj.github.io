@@ -52,7 +52,7 @@
 <p>出现如图的提示我们就拉取完毕源码啦</p>
 <p><img src="https://s2.loli.net/2023/01/12/kcVLgTKzCOnFewh.png" alt="IMG_3490.PNG"></p>
 <hr>
-<h2 id="二-编译准备工作"><a href="#二-编译准备工作" class="headerlink" title="二.编译准备工作"></a>二.编译准备工作</h2><p>接下来就要开始编译了</p>
+<h2 id="三-编译准备工作"><a href="#三-编译准备工作" class="headerlink" title="三.编译准备工作"></a>三.编译准备工作</h2><p>接下来就要开始编译了</p>
 <p><em><strong>准备工作：</strong></em></p>
 <ul>
 <li>准备好自己设备的 $\color{Plum}DeviceTree$ (下文称 <em>dt</em>)</li>
@@ -95,7 +95,7 @@
 <p>进入源码目录&#x2F;device&#x2F;厂商名的文件夹里</p>
 <p><img src="https://s2.loli.net/2023/01/12/xwsJWljezRrbKpQ.jpg" alt="IMG_3494_20230112-161104_.JPG"></p>
 <p>里面还有一个文件夹，这是你的设备名，记住这个文件夹名，待会会用到(下称设备名)</p>
-<p>回到源码根目录</p>
+<h3 id="四-开始编译"><a href="#四-开始编译" class="headerlink" title="四.开始编译"></a>四.开始编译</h3><p>回到源码根目录</p>
 <p><code>. build/envsetup.sh</code></p>
 <p><code>lunch omni_设备名-eng</code></p>
 <p>这是一个小例子:</p>

@@ -55,7 +55,7 @@
 <h2 id="三-编译准备工作"><a href="#三-编译准备工作" class="headerlink" title="三.编译准备工作"></a>三.编译准备工作</h2><p>接下来就要开始编译了</p>
 <p><em><strong>准备工作：</strong></em></p>
 <ul>
-<li>准备好自己设备的 $\color{Plum}DeviceTree$ (下文称 <em>dt</em>)</li>
+<li>准备好自己设备的 <em>DeviceTree</em> (下文称 <em>dt</em>)</li>
 </ul>
 <hr>
 <p>dt的获取有两个渠道:</p>
